@@ -1,5 +1,6 @@
-import random
+import random  #neccessary to genrate random option by computer
 
+#function will cehck the result
 def gamewin(comp, you):
     if comp == you:
         print("TIE")
@@ -24,17 +25,15 @@ def gamewin(comp, you):
     else :
         print("wrong choice")                       
                 
-
-
-
-
-
-you = input("yoyr turn : Snake(s) Water(w) Gun(g)? ")
-
+#users choice
+you = input("your turn : Snake(s) Water(w) Gun(g)? ")
 
 print(("compuer's turn : Snake(s) Water(w) Gun(g)? " ))
-r = random.randint(1, 3)
 
+#computer will choice from number 1 to number 3 
+r = random.randint(1, 3) 
+
+#on the basis of random number the choice will be assigned for the computer
 if r == 1:
     comp = 's'
 elif r == 2:
@@ -46,7 +45,5 @@ elif r==3 :
 print(f"computer chose {comp}")
 print(f"you chose {you}")
 
-
-
-
+#calling resukt checking function
 gamewin(comp, you)
